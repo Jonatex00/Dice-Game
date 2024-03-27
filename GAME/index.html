@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Dice Game</title>
+  </head>
+  <body>
+    <div class="hidden" id="formContainer">
+      <form>
+        <h2 class="enterNames">Enter <span>Player</span> Names</h2>
+        <label for="player1">Player 1</label>
+        <input type="text" id="user1" required placeholder="Enter your name " />
+        <br />
+        <label for="player2">Player 2</label>
+        <input type="text" id="user2" required placeholder="Enter your name" />
+        <button class="startBtn btn">🎲Start Game</button>
+      </form>
+    </div>
+    <h2 class="sp hidden">Start Playing.....😉</h2>
+    <p class="timer">Time: 60sec</p>
+    <audio src="./sounds/beep-warning-6387.mp3" class="warning"></audio>
+    <div class="scores">
+      <p class="user1ScoreDisplay"> 0</p>
+      <p class="user2ScoreDisplay">:0</p>
+    </div>
+
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">30</p>
+
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <p class="player--wins hidden">Winner🏆</p>
+
+      <audio
+        src="./sounds/mixkit-audience-light-applause-354.wav"
+        class="winner-sound"
+      ></audio>
+
+      <p class="game-over hidden">Game over🎯</p>
+      <audio src="./sounds/buzzer-15-187758.mp3" class="gameOver"></audio>
+
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">18</p>
+
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="dice-5.png" alt="Playing dice" class="dice" />
+      <button class="btn btn--new">🔄 New game</button>
+
+      <button class="btn btn--roll">🎲 Roll dice</button>
+
+      <audio
+        src="./sounds/dice-142528.mp3"
+        type="audio"
+        class="dice-sound"
+      ></audio>
+
+      <button class="btn btn--hold disabled">📥 Hold</button>
+
+      <audio
+        src="./sounds/two-symbols-minimal-logo-108965.mp3"
+        class="hold-sound"
+      ></audio>
+    </main>
+    <script type="module" src="../JavaScript/script.js"></script>
+  </body>
+</html>
