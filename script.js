@@ -1,7 +1,7 @@
 import selectors from './selectors.js';
 //  Tell users to enter their names
 let user1 = '';
-let user2 = '';
+let user2 = selectors.user1El.textContent;
 
 const startGame = () => {
   selectors.user0El.textContent = user1;
@@ -153,7 +153,7 @@ selectors.btnRoll.addEventListener('click', function () {
 
 const computerLogic = function () {
   if (playing && activePlayer === 1) {
-    const thresholds = [7, 12, 9, 15, 10, 22, 8];
+    const thresholds = [7, 12, 20, 40, 45, 50, 9, 15, 10, 22, 25, 30, 35, 8];
     const randomIndex = Math.floor(Math.random() * thresholds.length);
     const threshold = thresholds[randomIndex];
     setTimeout(() => {
@@ -176,12 +176,14 @@ const computerLogic = function () {
           if (scores[activePlayer] >= 50) {
             playing = false; // End the game
             selectors.diceEl.classList.add('hidden');
-            selectors.winnerSound.play();
+            selectors.compututerWins.play();
+
             document
               .querySelector(`.player--${activePlayer}`)
               .classList.add('player--winner');
             selectors.winner.classList.remove('hidden');
-            declareWinner(); // Display winner
+
+            declareWinner();
             endGame();
           } else {
             switchPlayer(); // Switch to the next player

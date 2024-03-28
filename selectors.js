@@ -13,6 +13,7 @@ const selectors = {
   btnHold: document.querySelector('.btn--hold'),
   winner: document.querySelector('.player--wins'),
   gameOver: document.querySelector('.game-over'),
+  compututerWins: document.querySelector('.computerWins'),
   winnerSound: document.querySelector('.winner-sound'),
   diceSound: document.querySelector('.dice-sound'),
   user0El: document.getElementById('name--0'),
