@@ -11,12 +11,10 @@
   <body>
     <div class="hidden" id="formContainer">
       <form>
-        <h2 class="enterNames">Enter <span>Player</span> Names</h2>
-        <label for="player1">Player 1</label>
+        <h2 class="enterNames">Enter <span>Player</span> Name</h2>
+        <br />
         <input type="text" id="user1" required placeholder="Enter your name " />
         <br />
-        <label for="player2">Player 2</label>
-        <input type="text" id="user2" required placeholder="Enter your name" />
         <button class="startBtn btn">🎲Start Game</button>
       </form>
     </div>
@@ -25,12 +23,14 @@
     <audio src="./sounds/beep-warning-6387.mp3" class="warning"></audio>
     <div class="scores">
       <p class="user1ScoreDisplay">0</p>
-      <p class="user2ScoreDisplay">:0</p>
+      <p>:</p>
+      <p class="user2ScoreDisplay">0</p>
     </div>
+    <button class="resetScore">Reset Score</button>
 
     <main>
       <section class="player player--0 player--active">
-        <h2 class="name" id="name--0">Player 1</h2>
+        <h2 class="name" id="name--0">Player</h2>
         <p class="score" id="score--0">30</p>
 
         <div class="current">
@@ -45,11 +45,17 @@
         class="winner-sound"
       ></audio>
 
-      <p class="game-over hidden">Game over🎯</p>
+      <p class="game-over hidden">Game over❌</p>
       <audio src="./sounds/buzzer-15-187758.mp3" class="gameOver"></audio>
 
       <section class="player player--1">
-        <h2 class="name" id="name--1">Player 2</h2>
+        <div class="master-player">
+          <h2 class="name" id="name--1">Dice Genius</h2>
+          <img
+            class="dice-genius"
+            src="./dice_genius-removebg-preview (1).png"
+          />
+        </div>
         <p class="score" id="score--1">18</p>
 
         <div class="current">
