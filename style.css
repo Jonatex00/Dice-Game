@@ -201,7 +201,7 @@ main {
   display: none;
 }
 .player--wins {
-  color: rgba(3, 104, 3, 0.9);
+  /* color: rgba(3, 104, 3, 0.9); */
   position: absolute;
 
   color: rgb(234, 177, 53);
@@ -467,7 +467,7 @@ main {
   }
 
   .player--wins {
-    color: darkgreen;
+    color: rgb(234, 177, 53);
     position: absolute;
     left: 31%;
     font-size: 3.5rem;
