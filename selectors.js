@@ -30,5 +30,6 @@ const selectors = {
   warning: document.querySelector('.warning'),
   timer: document.querySelector('.timer'),
   resetScore: document.querySelector('.resetScore'),
+  darkMood: document.querySelector('.dk-container'),
 };
 export default selectors;

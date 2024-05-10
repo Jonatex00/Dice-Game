@@ -341,6 +341,33 @@ main {
   transform: scale(0.9);
 }
 
+.dk-container {
+  outline: 5px dotted white;
+  position: absolute;
+  left: 2%;
+  bottom: 90%;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.4s ease-in-out;
+  /* width: 7.5rem; */
+}
+.dk-container:hover {
+  transition: all 0.5s ease-in-out;
+  transform: scale(0.9);
+}
+.dark-mode {
+  width: 4.2rem;
+  height: 4rem;
+  cursor: pointer;
+}
+.dark {
+  background: black;
+  color: white;
+}
+.white {
+  background: white;
+}
+
 /*  ================= media query (Phones) ============= */
 @media only screen and (max-width: 900px) {
   body {
@@ -469,8 +496,8 @@ main {
   .player--wins {
     color: rgb(234, 177, 53);
     position: absolute;
-    left: 31%;
-    font-size: 3.5rem;
+    left: 35%;
+    font-size: 2.3rem;
     font-weight: bolder;
     font-family: Arial, Helvetica, sans-serif;
     top: 40%;
@@ -536,6 +563,20 @@ main {
     bottom: 90%;
     left: 20%;
     border: 1px solid white;
-    width: 15rem;
+    width: 14rem;
+  }
+  .dice-genius {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  #name--0,
+  #name--1 {
+    /* color: blue; */
+    width: fit-content;
+    font-size: 1.4rem;
+  }
+  .sp {
+    top: 10%;
+    font-size: 2.2rem;
   }
 }

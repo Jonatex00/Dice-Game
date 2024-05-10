@@ -27,6 +27,9 @@
       <p class="user2ScoreDisplay">0</p>
     </div>
     <button class="resetScore">Reset Score</button>
+    <div class="dk-container">
+      <img class="dark-mode" src="./Darkmood.png" />
+    </div>
 
     <main>
       <section class="player player--0 player--active">
@@ -47,7 +50,10 @@
 
       <p class="game-over hidden">Game over❌</p>
       <audio src="./sounds/buzzer-15-187758.mp3" class="gameOver"></audio>
-      <audio src="./sounds/mixkit-sad-game-over-trombone-471.wav" class="computerWins"></audio>
+      <audio
+        src="./sounds/mixkit-sad-game-over-trombone-471.wav"
+        class="computerWins"
+      ></audio>
 
       <section class="player player--1">
         <div class="master-player">
@@ -78,10 +84,7 @@
 
       <button class="btn btn--hold disabled">📥 Hold</button>
 
-      <audio
-        src="./sounds/two-symbols-minimal-logo-108965.mp3"
-        class="hold-sound"
-      ></audio>
+      <audio src="./sounds/your turn.m4a" class="hold-sound"></audio>
     </main>
     <script type="module" src="./script.js"></script>
   </body>

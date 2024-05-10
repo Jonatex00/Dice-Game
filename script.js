@@ -20,7 +20,7 @@ const checkAndStartGame = event => {
       selectors.startPlayingHeader.style.display = 'none';
     }, 2000);
   } else {
-    alert('Please enter players names to start the game.');
+    alert('Please enter player name to start the game.');
   }
 };
 selectors.startButton.addEventListener('click', checkAndStartGame);
@@ -120,8 +120,11 @@ const init = function () {
   selectors.player1El.classList.remove('player--winner');
   selectors.player0El.classList.add('player--active');
   selectors.player1El.classList.remove('player--active');
+  document.body.style.backgroundImage =
+    'linear-gradient(to top left, #753682 0%, #bf2e34 100%)';
   startTimer();
   updateScoresDisplay();
+  // darkMood();
 };
 // ====== Active Player ======
 const switchPlayer = function () {
@@ -229,11 +232,11 @@ selectors.btnHold.addEventListener('click', function () {
 
 selectors.btnNew.addEventListener('click', function () {
   if (user1 !== '') {
-    document.body.style.backgroundImage =
-      'linear-gradient(to top left, #753682 0%, #bf2e34 100%)';
+    // document.body.style.backgroundImage =
+    //   'linear-gradient(to top left, #753682 0%, #bf2e34 100%)';
     init();
   } else {
-    alert('Please enter players names to start the game.');
+    alert('Please enter player name to start the game.');
   }
 });
 
@@ -268,3 +271,9 @@ const clearLocalStorage = function () {
 selectors.resetScore.addEventListener('click', function () {
   clearLocalStorage();
 });
+
+const darkMood = function () {
+  document.body.classList.toggle('dark');
+  selectors.darkMood.classList.toggle('white');
+};
+selectors.darkMood.addEventListener('click', darkMood);
